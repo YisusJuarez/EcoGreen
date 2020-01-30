@@ -369,6 +369,12 @@ background-attachment: fixed;
 .padding-ubic{
     padding-top: 40px !important;
 }
+#sticky-footer {
+    flex-shrink: none;
+    background-color:#25d366 !important;
+    color: whitesmoke !important;
+    border-top: 8px solid #2A7A24;
+  }
 @media(max-width:652px){
     .title-servicios-2{
         color: white;

@@ -340,6 +340,35 @@ background-attachment: fixed;
     font-size: 18px;
     margin-top: 20px;
 }
+.google-maps {
+    position: relative;
+    padding-bottom: 500px;
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 500px !important;
+}
+.title-ubicacion{
+    color: #25d366;
+    padding-left: 20px;
+    font-size: 50px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+    text-align: center;
+    padding-top: 20px;
+}
+.text-direccion{
+    text-align: justify;
+    font-size: 20px;
+}
+.padding-ubic{
+    padding-top: 40px !important;
+}
 @media(max-width:652px){
     .title-servicios-2{
         color: white;
@@ -350,6 +379,11 @@ background-attachment: fixed;
     .title-nosotros{
         padding-top: 20px;
         font-size: 28px;
+        
+    }
+    .title-ubicacion{
+        padding-top: 20px;
+        font-size: 30px;
         
     }
     .ofrecemos-text{
@@ -380,11 +414,27 @@ background-attachment: fixed;
     .title-ofrecemos{
         color: black;
         text-align: center;
-        font-size: 28px;
+        font-size: 30px;
         font-weight: lighter;
         margin-top: 20px;
         color: #25d366;
         margin-bottom: 0px;
      
+    }
+    .google-maps {
+        position: relative;
+        padding-bottom: 300px;
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 300px !important;
+    }
+    .padding-ubic{
+        padding-top: 0px;
     }
 }

@@ -300,6 +300,46 @@ background-attachment: fixed;
     line-height: 43px;
     
 }
+.form-input{
+    width: 100%;
+    border: 1px solid #CCD1D1;
+    background-color: #CCD1D1;
+    color: black;
+    font-size: 18px;
+
+}
+.form-bg{
+    background-color: #707B7C;
+    padding: 15px;
+    padding-bottom: 20px;
+}
+.form-titles{
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 4px;
+    color: #25d366;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+.form-title{
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 30px;
+}
+.btn-form{
+    display: block;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #25d366;
+    background-color: #25d366;
+    color: #CCD1D1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+}
 @media(max-width:652px){
     .title-servicios-2{
         color: white;

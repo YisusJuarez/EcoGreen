@@ -25,13 +25,16 @@
           <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nosotros</a>
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Nosotros</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Servicios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Ubicación</a>
         </li>
       </ul>
       <div class=" my-2 my-lg-0">
@@ -41,7 +44,22 @@
   </nav>
   <div class="container-fluid">
     <div class="row no-gutter">
-      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+      <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-block d-none">
+        <div class="row">
+          <div class="col-md-10  mx-auto py-5">
+            <form class="form-bg">
+              <p class="form-title">CONTÁCTANOS</p>
+              <p class="form-titles">NOMBRE</p class="form-titles">
+              <input class="form-input" type="text">
+              <p class="form-titles">TELÉFONO</p>
+              <input class="form-input" type="text">
+              <p class="form-titles">CORREO</p>
+              <input class="form-input" type="text">
+              <input type="button" class="btn-form" value="ENVIAR">
+            </form>
+          </div>
+        </div>
+      </div>
       <div class="col-md-8 col-lg-6 bg-image-2">
         <div class="login d-flex align-items-center py-5">
           <div class="container">
@@ -53,11 +71,28 @@
                 <p class="sub-text-inicial">Expertos en fumigación, desinfectamos tu casa, oficina, jardín, o cualquier
                   inmueble</p>
                 <!--IZQ INFO-->
-                <button class="btn-oikos btn-oikos-2">Conócenos</button>
+                <button class="btn-oikos btn-oikos-2 d-md-block d-none">Conócenos</button>
+                <button class="btn-oikos btn-oikos-2 d-md-none">Contáctanos</button>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-none">
+        <div class="row">
+          <div class="col-md-10  mx-auto py-5">
+            <form class="form-bg">
+              <p class="form-title">CONTÁCTANOS</p>
+              <p class="form-titles">NOMBRE</p class="form-titles">
+              <input class="form-input" type="text">
+              <p class="form-titles">TELÉFONO</p>
+              <input class="form-input" type="text">
+              <p class="form-titles">CORREO</p>
+              <input class="form-input" type="text">
+              <input type="button" class="btn-form" value="ENVIAR">
+            </form>
+          </div>
+        </div>   
       </div>
     </div>
   </div>

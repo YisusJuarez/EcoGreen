@@ -449,6 +449,7 @@
 .icon-llamada{
     color: #2471A3;
     font-size: 70px;
+    padding-right: 10px;
 }
 
 @media(max-width:652px) {

@@ -13,6 +13,10 @@
 </head>
 
 <body>
+  <div class="boton-flotante d-lg-none">
+    <a href="https://wa.me/5215560037963"><i class="fab fa-whatsapp-square icon-whats"></i></a>
+    <a><i class="fas fa-phone-square-alt icon-llamada"></i></a>
+  </div>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-color">
     <a class="navbar-brand" href="#">Logo</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -34,11 +38,11 @@
           <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Servicios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Ubicación</a>
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
         </li>
       </ul>
       <div class=" my-2 my-lg-0">
-        <button class="btn-eco"> <i style="font-size: 20px;" class="fab fa-whatsapp"></i> WhatsApp</button>
+        <a href="https://wa.me/5215560037963" class="btn-eco"> <i style="font-size: 20px;" class="fab fa-whatsapp"></i> WhatsApp</a>
       </div>
     </div>
   </nav>
@@ -46,16 +50,18 @@
     <div class="row no-gutter">
       <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-block d-none">
         <div class="row">
-          <div class="col-md-10  mx-auto py-5">
-            <form class="form-bg">
+          <div class="col-md-10 mx-auto py-5 " style="margin-top: 20%;">
+            <form class="form-bg shadow-lg">
               <p class="form-title">CONTÁCTANOS</p>
               <p class="form-titles">NOMBRE</p class="form-titles">
-              <input class="form-input" type="text">
+              <input class="form-input" type="text" name="first_name">
+              <p class="form-titles">APELLIDO</p class="form-titles">
+              <input class="form-input" type="text" name="second_name">
               <p class="form-titles">TELÉFONO</p>
-              <input class="form-input" type="text">
+              <input class="form-input" type="text" name="message">
               <p class="form-titles">CORREO</p>
-              <input class="form-input" type="text">
-              <input type="button" class="btn-form" value="ENVIAR">
+              <input class="form-input" type="text" name="email">
+              <input type="submit" class="btn-form" value="ENVIAR">
             </form>
           </div>
         </div>
@@ -80,7 +86,7 @@
       </div>
       <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-none">
         <div class="row">
-          <div class="col-md-10  mx-auto py-5">
+          <div class="col-md-10  mx-auto py-5 ">
             <form class="form-bg">
               <p class="form-title">CONTÁCTANOS</p>
               <p class="form-titles">NOMBRE</p class="form-titles">
@@ -148,7 +154,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <div class="col-bg-servicios">
+        <div class="col-bg-servicios shadow">
           <div class="text-center">
             <i class="fas fa-globe-americas icon-width"></i>
           </div>
@@ -157,7 +163,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="col-bg-servicios">
+        <div class="col-bg-servicios shadow">
           <div class="text-center">
             <i class="fas fa-award  icon-width"></i>
           </div>
@@ -166,7 +172,7 @@
         </div>
       </div>
       <div class="col-md-4 ">
-        <div class="col-bg-servicios">
+        <div class="col-bg-servicios shadow">
           <div class="text-center">
             <i class="fas fa-code-branch icon-width"></i>
           </div>
@@ -182,7 +188,30 @@
     </div>
     <div class="container-fluid cont-style">
       <div class="row justify-content-center ">
-        <div class="col-md-6">
+        <div class="col-md-9">
+          <!--<div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <ul>
+                  <li class="list-style">Control de ratones</li>
+                  <li class="list-style">Control de hormigas</li>
+                  <li class="list-style">Control de alacranes</li>
+                  <li class="list-style">Control de pulgas</li>
+                  <li class="list-style">Control de arañas</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li class="list-style">Control de mosquitos</li>
+                  <li class="list-style">Control de moscas</li>
+                  <li class="list-style">Control de chinches</li>
+                  <li class="list-style">Control de cucarachas</li>
+                </ul>
+              </div>
+            </div>
+          </div>-->
+
+
           <p class="ofrecemos-text">Control de ratones | Control de hormigas | Control de alacranes | Control de pulgas
             | Control de mosquitos
             | Control de moscas | Control de chinches | Control de cucarachas | Control de arañas</p>
@@ -211,26 +240,41 @@
     </div>
 
     <div class="row justify-content-center">
-      <div class="col-md-7 ofrecemos"><span class="number">1</span> Contamos con los mejores técnicos certificados para
+      <div class="col-md-9 ofrecemos"><span class="number">1</span> Contamos con los mejores técnicos certificados para
         ofrecerte el mejor servicio.</div>
-      <div class="col-md-7 ofrecemos-2"><span class="number">2</span> En EcoGreen contamos con los precisos competitivos
+      <div class="col-md-9 ofrecemos-2"><span class="number">2</span> En EcoGreen contamos con los precisos competitivos
         que se adaptan a la necesidad de nuestros clientes.</div>
-      <div class="col-md-7 ofrecemos"><span class="number">3</span> Nuestros productos son 100% ecológicos que no dañan
+      <div class="col-md-9 ofrecemos"><span class="number">3</span> Nuestros productos son 100% ecológicos que no dañan
         al medio ambiente ni afectan a la salud de nuestros clientes.</div>
-      <div class="col-md-7 ofrecemos-2"><span class="number">4</span> Contamos con el mejor equipo de fumigación ya que
+      <div class="col-md-9 ofrecemos-2"><span class="number">4</span> Contamos con el mejor equipo de fumigación ya que
         nuestras herramientas son altamente tecnológicas y las mejores del mercado.</div>
-      <div class="col-md-7 ofrecemos"><span class="number">5</span> En EcoGreen nuestra estrategia para el control de
+      <div class="col-md-9 ofrecemos"><span class="number">5</span> En EcoGreen nuestra estrategia para el control de
         plagas es la mejor ya que analizamos precisamente las zonas afectadas y poder llevar el tratamiento adecuado.
       </div>
     </div>
-    <div class="row py-4 padding-ubic">
-      <div class="col-md-5">
-        <p class="title-ubicacion">UBICACIÓN</p>
+    <div class="row py-4 padding-ubic justify-content-center">
+      <div class="col-md-4" style="padding-bottom: 20px;">
+        <p class="title-ubicacion-contacto">CONTACTO</p>
+        <p class="subs-info">DIRECCIÓN</p>
         <p class="text-direccion">
           Calle Ignacio Molina Lt 3 Mz 16, La Era I y II, Iztapalapa, Ciudad de México, CDMX
         </p>
+        <p class="subs-info">CORREO ELECTRÓNICO</p>
+        <p class="text-direccion">
+          ventas.ecogreen@gmail.com
+        </p>
+        <p class="subs-info">HORARIO DE ATENCIÓN</p>
+        <p class="text-direccion" style="margin-bottom: 0px;">
+          Lunes a Viernes:
+        </p>
+        <div class="text-direccion">
+          9:00 am a 18:00 pm
+        </div>
+        <div class="text-direccion">
+          Sábado 9:00 am a 14:00 pm
+        </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-6">
         <div class="google-maps">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.1785440294638!2d-99.05288117085682!3d19.338205264623987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDIwJzE3LjUiTiA5OcKwMDMnMDguNCJX!5e0!3m2!1ses!2smx!4v1580349157871!5m2!1ses!2smx"
@@ -242,11 +286,11 @@
 
 
   </div>
-  <footer id="sticky-footer" class="py-4  ">
+  <!-- <footer id="sticky-footer" class="py-4  ">
     <div class="container text-center">
       <small>Copyright &copy; EcoGreen</small>
     </div>
-  </footer>
+  </footer>-->
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
   integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -257,3 +301,37 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 
 </html>
+<!--
+<?php
+if (isset($_POST['submit'])) {
+    $to = "ventas.ecogreen@gmail.com"; // correo propio
+    $from = $_POST['email']; // correo del usuario
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Solicitud de Información - EcoGreen";
+    //$subject2 = "Copy of your form submission";
+    //$message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message = '<html>' .
+        '<head><title>EcoGreen</title></head>' .
+        '<body><h1>Solicitud de Información</h1>' .
+        '<hr>' .
+        '<p>Nombre:' . $first_name . $last_name . "</p>" .
+        '<p>Correo:' . $from . "</p>" .
+        '<p>Teléfono:' . $_POST['message'] . "</p>" .
+        '</body>' .
+        '</html>';
+    //$message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+    $headers = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+   
+    $headers .= 'From: ' . $from . "\r\n";
+    //$headers2 = "From:" . $to;
+    $enviado = mail($to, $subject, $message, $headers);
+    //mail($from, $subject2, $message2, $headers2);
+    if ($enviado) {
+        echo '<div class="alert alert-success alert-correo" role="alert">¡Correo enviado! Nos pondremos en contacto contigo lo mas pronto posible.</div>';
+    } else {
+        echo '<div class="alert alert-danger alert-correo" role="alert">¡Error! Hubo un error al intentar enviar el correo.</div>';
+    }
+}
+?>-->

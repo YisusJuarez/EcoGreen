@@ -139,8 +139,9 @@
     transition: all .5s;
 
 }
+
 .btn-oikos:hover {
-border: 2px solid white;
+    border: 2px solid white;
 
 }
 
@@ -183,81 +184,94 @@ border: 2px solid white;
     text-align: center;
     margin-bottom: 0px;
 }
-.text-servicios{
+
+.text-servicios {
     text-align: center;
     font-weight: lighter;
 }
-.icon-width{
+
+.icon-width {
     font-size: 80px;
-    color: #25d366 ;
+    color: #25d366;
     padding-bottom: 15px;
 }
-.col-bg-servicios{
+
+.col-bg-servicios {
     background-color: whitesmoke;
     padding: 20px;
     margin-top: 30px;
 }
+
 /*NOSOTROS*/
-.text-somos{
+.text-somos {
     font-size: 20px;
     text-align: justify;
     padding: 20px;
     padding-bottom: 5px;
     font-weight: lighter;
 }
-.title-nosotros{
+
+.title-nosotros {
     color: #25d366;
     padding-left: 20px;
     font-size: 50px;
     font-weight: lighter;
     margin-bottom: 5px;
 }
-.col-bg2{
+
+.col-bg2 {
     background-image: url(./bg2.jpeg);
     background-size: cover;
 }
-.title-servicios-2{
+
+.title-servicios-2 {
     color: white;
     font-size: 40px;
     font-weight: lighter;
     text-align: center;
 }
-.cont-bg{
+
+.cont-bg {
     background-color: #25d366;
     margin-top: 25px;
 }
-.ofrecemos{
+
+.ofrecemos {
     background-color: whitesmoke;
-    padding-top:10px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-   font-size: 18px;
-   font-weight: lighter;
-   text-align: justify;
-}
-.ofrecemos-2{
-    background-color: #E4F6E0;
-    padding-top:10px;
+    padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 10px;
     font-size: 18px;
     font-weight: lighter;
     text-align: justify;
-    
 }
-.ofrecemos-text{
+
+.ofrecemos-2 {
+    background-color: #E4F6E0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: justify;
+
+}
+
+.ofrecemos-text {
     text-align: center;
     font-size: 20px;
     padding-top: 20px;
 }
-.cont-style{
-background-image: url(./bg-servicios.png);
-background-position: bottom;
-background-size: cover;
-padding-bottom: 25px;
-background-attachment: fixed;
+
+.cont-style {
+    background-image: url(./bg-servicios.png);
+    background-position: bottom;
+    background-size: cover;
+    padding-bottom: 25px;
+    background-attachment: fixed;
 }
-.title-ofrecemos{
+
+.title-ofrecemos {
     color: black;
     text-align: center;
     font-size: 40px;
@@ -265,10 +279,11 @@ background-attachment: fixed;
     margin-top: 20px;
     color: #25d366;
     margin-bottom: 0px;
- 
+
 }
-.number{
-    
+
+.number {
+
     font-size: 20px;
     padding-left: 13px;
     padding-right: 13px;
@@ -277,30 +292,34 @@ background-attachment: fixed;
     color: #25d366;
     font-weight: bolder;
 }
-.text-areas{
+
+.text-areas {
     color: white;
     text-align: center;
     font-size: 23px;
     font-weight: lighter;
     line-height: 19px;
 }
-.icon-width-2{
+
+.icon-width-2 {
     padding-top: 20px;
     font-size: 50px;
     color: white;
     padding-bottom: 15px;
-   
+
 }
-.areas-text{
+
+.areas-text {
     color: #25d366;
     font-size: 40px;
     text-align: center;
     font-weight: bold;
     margin-bottom: 0px;
     line-height: 43px;
-    
+
 }
-.form-input{
+
+.form-input {
     width: 100%;
     border: 1px solid #CCD1D1;
     background-color: #CCD1D1;
@@ -308,12 +327,14 @@ background-attachment: fixed;
     font-size: 18px;
 
 }
-.form-bg{
+
+.form-bg {
     background-color: #707B7C;
     padding: 15px;
     padding-bottom: 20px;
 }
-.form-titles{
+
+.form-titles {
     font-size: 18px;
     font-weight: normal;
     letter-spacing: 4px;
@@ -321,13 +342,15 @@ background-attachment: fixed;
     margin-bottom: 0px;
     margin-top: 20px;
 }
-.form-title{
+
+.form-title {
     color: white;
     font-weight: lighter;
     text-align: center;
     font-size: 30px;
 }
-.btn-form{
+
+.btn-form {
     display: block;
     margin-left: auto;
     padding-left: 10px;
@@ -340,12 +363,14 @@ background-attachment: fixed;
     font-size: 18px;
     margin-top: 20px;
 }
+
 .google-maps {
     position: relative;
     padding-bottom: 500px;
     height: 0;
     overflow: hidden;
 }
+
 .google-maps iframe {
     position: absolute;
     top: 0;
@@ -353,7 +378,8 @@ background-attachment: fixed;
     width: 100% !important;
     height: 500px !important;
 }
-.title-ubicacion{
+
+.title-ubicacion {
     color: #25d366;
     padding-left: 20px;
     font-size: 50px;
@@ -362,62 +388,123 @@ background-attachment: fixed;
     text-align: center;
     padding-top: 20px;
 }
-.text-direccion{
+
+.text-direccion {
     text-align: justify;
     font-size: 20px;
 }
-.padding-ubic{
+
+.padding-ubic {
     padding-top: 40px !important;
 }
+
 #sticky-footer {
     flex-shrink: none;
-    background-color:#25d366 !important;
+    background-color: #25d366 !important;
     color: whitesmoke !important;
     border-top: 8px solid #2A7A24;
-  }
-@media(max-width:652px){
-    .title-servicios-2{
+}
+
+.subs-info {
+    font-weight: lighter;
+    color: black;
+    font-size: 25px;
+}
+
+.list-style {
+    list-style: none;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.title-ubicacion-contacto {
+    color: #25d366;
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+    text-align: center;
+    padding-top: 20px;
+}
+.boton-flotante{
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    color: red;
+    font-size: 30px;
+    z-index: 99999;
+    /*background-color: whitesmoke;
+    padding-left: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;*/
+   
+}
+.icon-whats{
+    color: #27AE60;
+    font-size: 70px;
+   
+}
+.icon-llamada{
+    color: #2471A3;
+    font-size: 70px;
+}
+
+@media(max-width:652px) {
+    .title-servicios-2 {
         color: white;
         font-size: 20px;
         font-weight: lighter;
         text-align: center;
     }
-    .title-nosotros{
+
+    .title-nosotros {
         padding-top: 20px;
         font-size: 28px;
-        
+
     }
-    .title-ubicacion{
+
+    .title-ubicacion {
         padding-top: 20px;
         font-size: 30px;
-        
+
     }
-    .ofrecemos-text{
+
+    .title-ubicacion-contacto {
+        padding-top: 20px;
+        font-size: 30px;
+    }
+
+    .ofrecemos-text {
         text-align: center;
         font-size: 18px;
         padding-top: 20px;
     }
+
     .text-grey {
         color: gray;
         opacity: .7;
         font-weight: lighter;
         font-size: 13vw;
     }
+
     .text-inicial {
         font-size: 6vw;
         font-weight: bold;
     }
+
     .sub-text-inicial {
         font-weight: normal;
         font-size: 5vw;
     }
-    .btn-oikos-2{
+
+    .btn-oikos-2 {
         display: block;
         margin-left: auto;
         margin-right: auto;
         font-size: 20px;
     }
-    .title-ofrecemos{
+
+    .title-ofrecemos {
         color: black;
         text-align: center;
         font-size: 30px;
@@ -425,14 +512,16 @@ background-attachment: fixed;
         margin-top: 20px;
         color: #25d366;
         margin-bottom: 0px;
-     
+
     }
+
     .google-maps {
         position: relative;
         padding-bottom: 300px;
         height: 0;
         overflow: hidden;
     }
+
     .google-maps iframe {
         position: absolute;
         top: 0;
@@ -440,7 +529,8 @@ background-attachment: fixed;
         width: 100% !important;
         height: 300px !important;
     }
-    .padding-ubic{
+
+    .padding-ubic {
         padding-top: 0px;
     }
 }

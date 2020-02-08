@@ -10,6 +10,7 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/animate.css">
 </head>
 
 <body>
@@ -17,28 +18,37 @@
     <a href="https://wa.me/5215560037963"><i class="fab fa-whatsapp-square icon-whats"></i></a>
     <a href="tel:5215560037963"><i class="fas fa-phone-square-alt icon-llamada"></i></a>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-color">
-    <a class="navbar-brand" href="#">Logo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+  <nav data-scroll-header class="navbar navbar-expand-lg navbar-light fixed-top bg-color >
+    <a class="navbar-brand" href="#"><img class="logo" src="./css/Ecogreeen2.png"></a>
+    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
       aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
+    </button>-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="line shadow"></span>
+      <span class="line shadow"></span>
+      <span class="line shadow" style="margin-bottom: 0;"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+        <li class="nav-item ">
+          <a class="nav-link" href="./index.html">Inicio </a>
+        </li>
+        <li class="nav-item d-md-block d-none">
+          <a class="nav-link" data-scroll href="#contacto">Contacto</a>
+        </li>
+        <li class="nav-item d-md-none">
+          <a class="nav-link" data-scroll href="#contacto2">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link" data-scroll href="#nosotros" tabindex="-1" aria-disabled="true">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Nosotros</a>
+          <a class="nav-link" data-scroll href="#servicios" tabindex="-1" aria-disabled="true">Servicios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Servicios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
+          <a class="nav-link" data-scroll href="#ubicacion" tabindex="-1" aria-disabled="true">Ubicación</a>
         </li>
       </ul>
       <div class=" my-2 my-lg-0 d-lg-block d-none">
@@ -53,9 +63,9 @@
   </nav>
   <div class="container-fluid">
     <div class="row no-gutter">
-      <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-block d-none">
-        <div class="row">
-          <div class="col-md-10 mx-auto py-5 " style="margin-top: 20%;">
+      <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-block d-none "  >
+        <div class="row" id="contacto ">
+          <div class="col-md-10 mx-auto py-5 wow animated fadeIn " style="margin-top: 20%;" >
             <form class="form-bg shadow-lg">
               <p class="form-title-2">CONTÁCTANOS</p>
               <p class="form-titles">NOMBRE</p class="form-titles">
@@ -75,15 +85,18 @@
         <div class="login d-flex align-items-center py-5">
           <div class="container">
             <div class="row">
-              <div class="col-md-9 col-lg-8 mx-auto">
+              <div class="col-md-9 col-lg-8 mx-auto wow animated fadeInUp"  data-wow-duration="2s">
                 <h1 class="text-grey">EcoGreen</h1>
                 <h3 class="login-heading mb-4 text-inicial">CONTAMOS CON EL MEJOR EQUIPO DE CONTROL DE PLAGAS EN <span
                     class="span-title">CDMX</span></h3>
                 <p class="sub-text-inicial">Expertos en fumigación, desinfectamos tu casa, oficina, jardín, o cualquier
                   inmueble</p>
                 <!--IZQ INFO-->
-                <button class="btn-oikos btn-oikos-2 d-md-block d-none">Conócenos</button>
-                <button class="btn-oikos btn-oikos-2 d-md-none">Contáctanos</button>
+                
+                  <a class="btn-oikos btn-oikos-2 d-md-block d-none" style="width: 130px;" data-scroll href="#nosotros">Conócenos</a>
+              
+                
+                <a class="btn-oikos btn-oikos-2 d-md-none" style="width: 150px;" data-scroll href="#contacto2">Contáctanos</a>
               </div>
             </div>
           </div>
@@ -91,7 +104,7 @@
       </div>
       <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-none">
         <div class="row">
-          <div class="col-md-10  mx-auto py-5 ">
+          <div class="col-md-10  mx-auto py-5  wow animated fadeIn" id="contacto2"  data-wow-duration="2s">
             <form class="form-bg">
               <p class="form-title">CONTÁCTANOS</p>
               <p class="form-titles">NOMBRE</p class="form-titles">
@@ -109,7 +122,7 @@
   </div>
   <div class="container-fluid" style="background-color: dimgray;">
     <div class="row">
-      <div class="col-md-4" style="padding-top: 20px;">
+      <div class="col-md-4"  style="padding-top: 20px;">
         <p class="areas-text">NUESTRAS</p>
         <p class="areas-text">ÁREAS</p>
       </div>
@@ -141,7 +154,7 @@
   </div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 wow animated fadeInLeft" data-wow-duration="2s" id="nosotros">
         <p class="title-nosotros">NOSOTROS</p>
         <p class="text-somos">EcoGreen es una empresa de fumigación ecológica que se encarga de el control de plagas y
           desinfección de las mismas.</p>
@@ -159,7 +172,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <div class="col-bg-servicios shadow">
+        <div class="col-bg-servicios shadow wow animated fadeInLeft"  data-wow-duration="2s">
           <div class="text-center">
             <i class="fas fa-globe-americas icon-width"></i>
           </div>
@@ -168,7 +181,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="col-bg-servicios shadow">
+        <div class="col-bg-servicios shadow wow animated fadeInUp"  data-wow-duration="2s">
           <div class="text-center">
             <i class="fas fa-award  icon-width"></i>
           </div>
@@ -177,7 +190,7 @@
         </div>
       </div>
       <div class="col-md-4 ">
-        <div class="col-bg-servicios shadow">
+        <div class="col-bg-servicios shadow wow animated fadeInRight"  data-wow-duration="2s">
           <div class="text-center">
             <i class="fas fa-code-branch icon-width"></i>
           </div>
@@ -188,7 +201,7 @@
     </div>
   </div>
   <div class="container-fluid">
-    <div class="title-servicios-2 cont-bg">
+    <div class="title-servicios-2 cont-bg" id="servicios">
       SERVICIOS QUE OFRECEMOS
     </div>
     <div class="container-fluid cont-style">
@@ -233,7 +246,7 @@
         <div class="col-md-4 ofrecemos">CONTROL DE ARAÑAS</div>-->
       </div>
       <div class="text-center">
-        <button class="btn-oikos">CONTÁCTANOS</button>
+        <a data-scroll href="#contacto2" class="btn-oikos">CONTÁCTANOS</a>
       </div>
 
     </div>
@@ -245,66 +258,30 @@
     </div>
 
     <div class="row justify-content-center">
-      <div class="col-md-9 ofrecemos"><span class="number">1</span> Contamos con los mejores técnicos certificados para
+      <div class="col-md-9 ofrecemos wow animated fadeInLeft" data-wow-duration="2s"><span class="number">1</span> Contamos con los mejores técnicos certificados para
         ofrecerte el mejor servicio.</div>
-      <div class="col-md-9 ofrecemos-2"><span class="number">2</span> En EcoGreen contamos con los precisos competitivos
+      <div class="col-md-9 ofrecemos-2 wow animated fadeInLeft" data-wow-duration="2.3s"><span class="number">2</span> En EcoGreen contamos con los precisos competitivos
         que se adaptan a la necesidad de nuestros clientes.</div>
-      <div class="col-md-9 ofrecemos"><span class="number">3</span> Nuestros productos son 100% ecológicos que no dañan
+      <div class="col-md-9 ofrecemos wow animated fadeInLeft" data-wow-duration="2.6s"><span class="number">3</span> Nuestros productos son 100% ecológicos que no dañan
         al medio ambiente ni afectan a la salud de nuestros clientes.</div>
-      <div class="col-md-9 ofrecemos-2"><span class="number">4</span> Contamos con el mejor equipo de fumigación ya que
+      <div class="col-md-9 ofrecemos-2 wow animated fadeInLeft" data-wow-duration="2.9s"><span class="number">4</span> Contamos con el mejor equipo de fumigación ya que
         nuestras herramientas son altamente tecnológicas y las mejores del mercado.</div>
-      <div class="col-md-9 ofrecemos"><span class="number">5</span> En EcoGreen nuestra estrategia para el control de
+      <div class="col-md-9 ofrecemos wow animated fadeInLeft" data-wow-duration="3.2s"><span class="number">5</span> En EcoGreen nuestra estrategia para el control de
         plagas es la mejor ya que analizamos precisamente las zonas afectadas y poder llevar el tratamiento adecuado.
       </div>
     </div>
-    <!--EMPRESA CON LAS QUE TRABAJAMOS
+
     <div class="text-center">
       <p class="title-ofrecemos">
-        SOCIOS
+        EMPRESA CON LAS QUE TRABAJAMOS
       </p>
     </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="text-center">
-            <img class="img-empresas" src="./css/PHOTO-2020-02-04-18-58-37.jpg">
-          </div>
-          
-        </div>
-        <div class="col-md-4">
-          <div class="text-center">
-            <img class="img-empresas-2" src="./css/PHOTO-2020-02-04-18-58-37 2.jpg">
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="text-center">
-            <img class="img-empresas-2" src="./css/PHOTO-2020-02-04-18-58-48.jpg">
-          </div>
-         
-        </div>
-        <div class="col-md-4">
-          <div class="text-center">
-            <img class="img-empresas" src="./css/PHOTO-2020-02-04-19-01-07.jpg">
-          </div>
-         
-        </div>
-        <div class="col-md-4">
-          <div class="text-center">
-            <img class="img-empresas" src="./css/PHOTO-2020-02-04-19-01-07 2.jpg">
-          </div>
-         
-        </div>
-        <div class="col-md-4">
-          <div class="text-center">
-            <img class="img-empresas" src="./css/PHOTO-2020-02-04-19-01-58.jpg">
-          </div>
-         
-        </div>
-      </div>
-    </div>-->
+    <div class="container" >
+      <img class="wow animated fadeIn"  data-wow-duration="3s" src="./css/empresas-desk.png" style="width: 100%;">
+    </div>
     <!-- fin empresas-->
-    <div class="row py-4 padding-ubic justify-content-center bg-contacto" >
-     <!-- <div class="col-md-4" style="padding-bottom: 20px;">
+    <div class="row py-4 padding-ubic justify-content-center bg-contacto">
+      <!-- <div class="col-md-4" style="padding-bottom: 20px;">
         <p class="title-ubicacion-contacto">CONTACTO</p>
         <p class="subs-info">DIRECCIÓN</p>
         <p class="text-direccion">
@@ -325,8 +302,8 @@
           Sábado 9:00 am a 14:00 pm
         </div>
       </div>-->
-      <div class="col-md-9">
-        <p class="title-ubicacion-contacto">CONTACTO</p>
+      <div class="col-md-9" id="ubicacion">
+        <p class="title-ubicacion-contacto">UBICACIÓN</p>
         <p class="text-direccion">
           <i class="fas fa-home"></i> Calle Ignacio Molina Lt 3 Mz 16, La Era I y II, Iztapalapa, Ciudad de México, CDMX
         </p>
@@ -336,22 +313,27 @@
         <div class="text-direccion" style="padding-bottom: 20px; color: white !important; text-decoration: none;">
           <i class="fas fa-phone"></i> 5560037963
         </div>
-        <div class="google-maps shadow" >
+        <div class="google-maps shadow wow animated fadeInUp" data-wow-duration="2s">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.1785440294638!2d-99.05288117085682!3d19.338205264623987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDIwJzE3LjUiTiA5OcKwMDMnMDguNCJX!5e0!3m2!1ses!2smx!4v1580349157871!5m2!1ses!2smx"
             width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
+        <div class="col-md-12">
+          <hr style="border-top: 1px solid white; ">
+          <footer id="sticky-footer">
+            <div class="container-fluid">
+              <small> EcoGreen &copy;2020 | Desarrollada por DotCom</small>
+            </div>
+          </footer>
+        </div>
       </div>
+
 
     </div>
 
 
   </div>
-  <!-- <footer id="sticky-footer" class="py-4  ">
-    <div class="container text-center">
-      <small>Copyright &copy; EcoGreen</small>
-    </div>
-  </footer>-->
+
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
   integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -360,6 +342,23 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 500,
+    speedAsDuration: true,
+    header: '[data-scroll-header]'
+   
+  });
+  var scroll = new SmoothScroll('nav',{
+		header: '[data-scroll-header]'
+	});
+</script>
+<script src="./js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 
 </html>
 <!--

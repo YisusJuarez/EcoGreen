@@ -1,3 +1,36 @@
+<?php
+if (isset($_POST['submit'])) {
+    $to = "ventas.ecogreenmip@gmail.com"; // correo propio
+    $from = $_POST['email']; // correo del usuario
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Solicitud de Información - EcoGreen";
+    //$subject2 = "Copy of your form submission";
+    //$message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message = '<html>' .
+        '<head><title>EcoGreen</title></head>' .
+        '<body><h1>Solicitud de Información</h1>' .
+        '<hr>' .
+        '<p>Nombre:' . $first_name . $last_name . "</p>" .
+        '<p>Correo:' . $from . "</p>" .
+        '<p>Teléfono:' . $_POST['message'] . "</p>" .
+        '</body>' .
+        '</html>';
+    //$message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+    $headers = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+   
+    $headers .= 'From: ' . $from . "\r\n";
+    //$headers2 = "From:" . $to;
+    $enviado = mail($to, $subject, $message, $headers);
+    //mail($from, $subject2, $message2, $headers2);
+    if ($enviado) {
+        echo '<div class="alert alert-success alert-correo" role="alert">¡Correo enviado! Nos pondremos en contacto contigo lo mas pronto posible.</div>';
+    } else {
+        echo '<div class="alert alert-danger alert-correo" role="alert">¡Error! Hubo un error al intentar enviar el correo.</div>';
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,10 +48,10 @@
 
 <body>
   <div class="boton-flotante d-lg-none shadow">
-    <a href="https://wa.me/5215560037963"><i class="fab fa-whatsapp-square icon-whats"></i></a>
-    <a href="tel:5215560037963"><i class="fas fa-phone-square-alt icon-llamada"></i></a>
+    <a href="https://wa.me/5610065892"><i class="fab fa-whatsapp-square icon-whats"></i></a>
+    <a href="tel:5562377643"><i class="fas fa-phone-square-alt icon-llamada"></i></a>
   </div>
-  <nav data-scroll-header class="navbar navbar-expand-lg navbar-light fixed-top bg-color >
+  <nav data-scroll-header class="navbar navbar-expand-lg navbar-light fixed-top bg-color" >
     <a class="navbar-brand" href="#"><img class="logo" src="./css/Ecogreeen2.png"></a>
     <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
       aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,11 +85,11 @@
         </li>
       </ul>
       <div class=" my-2 my-lg-0 d-lg-block d-none">
-        <a href="https://wa.me/5215560037963" class="btn-eco"> <i style="font-size: 20px;" class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/5610065892" class="btn-eco"> <i style="font-size: 20px;" class="fab fa-whatsapp"></i>
           WhatsApp</a>
       </div>
       <div class=" my-2 my-lg-0 d-lg-block d-none">
-        <a href="tel:5215560037963" class="btn-eco-phone"> <i style="font-size: 20px;"
+        <a href="tel:5562377643" class="btn-eco-phone"> <i style="font-size: 20px;"
             class="fas fa-phone-square-alt"></i> Teléfono</a>
       </div>
     </div>
@@ -66,7 +99,7 @@
       <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-block d-none "  >
         <div class="row" id="contacto ">
           <div class="col-md-10 mx-auto py-5 wow animated fadeIn " style="margin-top: 20%;" >
-            <form class="form-bg shadow-lg">
+            <form action="" method="post" class="form-bg shadow-lg">
               <p class="form-title-2">CONTÁCTANOS</p>
               <p class="form-titles">NOMBRE</p class="form-titles">
               <input class="form-input" type="text" name="first_name">
@@ -105,7 +138,7 @@
       <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-none">
         <div class="row">
           <div class="col-md-10  mx-auto py-5  wow animated fadeIn" id="contacto2"  data-wow-duration="2s">
-            <form class="form-bg">
+            <form class="form-bg" action="" method="post">
               <p class="form-title">CONTÁCTANOS</p>
               <p class="form-titles">NOMBRE</p class="form-titles">
               <input class="form-input" type="text">
@@ -113,7 +146,7 @@
               <input class="form-input" type="text">
               <p class="form-titles">CORREO</p>
               <input class="form-input" type="text">
-              <input type="button" class="btn-form" value="ENVIAR">
+              <input type="submit" class="btn-form" value="ENVIAR">
             </form>
           </div>
         </div>
@@ -306,9 +339,9 @@
           <i class="fas fa-envelope"></i> ventas.ecogreen@gmail.com
         </p>
         <div class="text-direccion" style="padding-bottom: 20px; color: white !important; text-decoration: none;">
-          <i class="fas fa-phone"></i> 5560037963
+          <i class="fas fa-phone"></i> 55 6237 7643
         </div>
-        <div class="google-maps shadow wow animated fadeInUp" data-wow-duration="2s">
+        <div class="google-maps shadow wow animated fadeInLeft" data-wow-duration="2s">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.1785440294638!2d-99.05288117085682!3d19.338205264623987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDIwJzE3LjUiTiA5OcKwMDMnMDguNCJX!5e0!3m2!1ses!2smx!4v1580349157871!5m2!1ses!2smx"
             width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -356,37 +389,4 @@
 </script>
 
 </html>
-<!--
-<?php
-if (isset($_POST['submit'])) {
-    $to = "ventas.ecogreen@gmail.com"; // correo propio
-    $from = $_POST['email']; // correo del usuario
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $subject = "Solicitud de Información - EcoGreen";
-    //$subject2 = "Copy of your form submission";
-    //$message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message = '<html>' .
-        '<head><title>EcoGreen</title></head>' .
-        '<body><h1>Solicitud de Información</h1>' .
-        '<hr>' .
-        '<p>Nombre:' . $first_name . $last_name . "</p>" .
-        '<p>Correo:' . $from . "</p>" .
-        '<p>Teléfono:' . $_POST['message'] . "</p>" .
-        '</body>' .
-        '</html>';
-    //$message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-    $headers = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-   
-    $headers .= 'From: ' . $from . "\r\n";
-    //$headers2 = "From:" . $to;
-    $enviado = mail($to, $subject, $message, $headers);
-    //mail($from, $subject2, $message2, $headers2);
-    if ($enviado) {
-        echo '<div class="alert alert-success alert-correo" role="alert">¡Correo enviado! Nos pondremos en contacto contigo lo mas pronto posible.</div>';
-    } else {
-        echo '<div class="alert alert-danger alert-correo" role="alert">¡Error! Hubo un error al intentar enviar el correo.</div>';
-    }
-}
-?>-->
+

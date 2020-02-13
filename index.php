@@ -1,43 +1,11 @@
-<?php
-if (isset($_POST['submit'])) {
-    $to = "ventas.ecogreenmip@gmail.com"; // correo propio
-    $from = $_POST['email']; // correo del usuario
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $subject = "Solicitud de Información - EcoGreen";
-    //$subject2 = "Copy of your form submission";
-    //$message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message = '<html>' .
-        '<head><title>EcoGreen</title></head>' .
-        '<body><h1>Solicitud de Información</h1>' .
-        '<hr>' .
-        '<p>Nombre:' . $first_name . $last_name . "</p>" .
-        '<p>Correo:' . $from . "</p>" .
-        '<p>Teléfono:' . $_POST['message'] . "</p>" .
-        '</body>' .
-        '</html>';
-    //$message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-    $headers = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-   
-    $headers .= 'From: ' . $from . "\r\n";
-    //$headers2 = "From:" . $to;
-    $enviado = mail($to, $subject, $message, $headers);
-    //mail($from, $subject2, $message2, $headers2);
-    if ($enviado) {
-        echo '<div class="alert alert-success alert-correo" role="alert">¡Correo enviado! Nos pondremos en contacto contigo lo mas pronto posible.</div>';
-    } else {
-        echo '<div class="alert alert-danger alert-correo" role="alert">¡Error! Hubo un error al intentar enviar el correo.</div>';
-    }
-}
-?>
-<!DOCTYPE html>
-<html lang="en">
 
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Expertos en fumigación, desinfectamos tu casa, oficina, jardín, o cualquier inmueble">
   <title>EcoGreen</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -48,10 +16,10 @@ if (isset($_POST['submit'])) {
 
 <body>
   <div class="boton-flotante d-lg-none shadow">
-    <a href="https://wa.me/5610065892"><i class="fab fa-whatsapp-square icon-whats"></i></a>
+    <a href="https://wa.me/+5215610065892"><i class="fab fa-whatsapp-square icon-whats"></i></a>
     <a href="tel:5562377643"><i class="fas fa-phone-square-alt icon-llamada"></i></a>
   </div>
-  <nav data-scroll-header class="navbar navbar-expand-lg navbar-light fixed-top bg-color" >
+  <nav data-scroll-header class="navbar navbar-expand-lg navbar-light fixed-top bg-color">
     <a class="navbar-brand" href="#"><img class="logo" src="./css/Ecogreeen2.png"></a>
     <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
       aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,20 +53,53 @@ if (isset($_POST['submit'])) {
         </li>
       </ul>
       <div class=" my-2 my-lg-0 d-lg-block d-none">
-        <a href="https://wa.me/5610065892" class="btn-eco"> <i style="font-size: 20px;" class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/+5215610065892" class="btn-eco"> <i style="font-size: 20px;" class="fab fa-whatsapp"></i>
           WhatsApp</a>
       </div>
       <div class=" my-2 my-lg-0 d-lg-block d-none">
-        <a href="tel:5562377643" class="btn-eco-phone"> <i style="font-size: 20px;"
-            class="fas fa-phone-square-alt"></i> Teléfono</a>
+        <a href="tel:5562377643" class="btn-eco-phone"> <i style="font-size: 20px;" class="fas fa-phone-square-alt"></i>
+          Teléfono</a>
       </div>
     </div>
   </nav>
   <div class="container-fluid">
     <div class="row no-gutter">
-      <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-block d-none "  >
+      <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-block d-none ">
         <div class="row" id="contacto ">
-          <div class="col-md-10 mx-auto py-5 wow animated fadeIn " style="margin-top: 20%;" >
+          <div class="col-md-10 mx-auto py-5 wow animated fadeIn " style="margin-top: 20%;">
+          <?php
+if (isset($_POST['submit'])) {
+    $to = "ventas@ecogreenmip.com.mx"; // correo propio
+    $from = $_POST['email']; // correo del usuario
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Solicitud de Información - EcoGreen";
+    //$subject2 = "Copy of your form submission";
+    //$message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message = '<html>' .
+        '<head><title>EcoGreen</title></head>' .
+        '<body><h1>Solicitud de Información</h1>' .
+        '<hr>' .
+        '<p>Nombre:' . $first_name . $last_name . "</p>" .
+        '<p>Correo:' . $from . "</p>" .
+        '<p>Teléfono:' . $_POST['message'] . "</p>" .
+        '</body>' .
+        '</html>';
+    //$message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+    $headers = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+   
+    $headers .= 'From: ' . $from . "\r\n";
+    //$headers2 = "From:" . $to;
+    $enviado = mail($to, $subject, $message, $headers);
+    //mail($from, $subject2, $message2, $headers2);
+    if ($enviado) {
+        echo '<div class="alert alert-success alert-correo" role="alert">¡Correo enviado! Nos pondremos en contacto contigo lo mas pronto posible.</div>';
+    } else {
+        echo '<div class="alert alert-danger alert-correo" role="alert">¡Error! Hubo un error al intentar enviar el correo.</div>';
+    }
+}
+?>
             <form action="" method="post" class="form-bg shadow-lg">
               <p class="form-title-2">CONTÁCTANOS</p>
               <p class="form-titles">NOMBRE</p class="form-titles">
@@ -118,18 +119,20 @@ if (isset($_POST['submit'])) {
         <div class="login d-flex align-items-center py-5">
           <div class="container">
             <div class="row">
-              <div class="col-md-9 col-lg-8 mx-auto wow animated fadeInUp"  data-wow-duration="2s">
+              <div class="col-md-9 col-lg-8 mx-auto wow animated fadeInUp" data-wow-duration="2s">
                 <h1 class="text-grey">EcoGreen</h1>
                 <h3 class="login-heading mb-4 text-inicial">CONTAMOS CON EL MEJOR EQUIPO DE CONTROL DE PLAGAS EN <span
                     class="span-title">CDMX</span></h3>
                 <p class="sub-text-inicial">Expertos en fumigación, desinfectamos tu casa, oficina, jardín, o cualquier
                   inmueble</p>
                 <!--IZQ INFO-->
-                
-                  <a class="btn-oikos btn-oikos-2 d-md-block d-none" style="width: 130px;" data-scroll href="#nosotros">Conócenos</a>
-              
-                
-                <a class="btn-oikos btn-oikos-2 d-md-none" style="width: 150px;" data-scroll href="#contacto2">Contáctanos</a>
+
+                <a class="btn-oikos btn-oikos-2 d-md-block d-none" style="width: 130px;" data-scroll
+                  href="#nosotros">Conócenos</a>
+
+
+                <a class="btn-oikos btn-oikos-2 d-md-none" style="width: 150px;" data-scroll
+                  href="#contacto2">Contáctanos</a>
               </div>
             </div>
           </div>
@@ -137,7 +140,7 @@ if (isset($_POST['submit'])) {
       </div>
       <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-none">
         <div class="row">
-          <div class="col-md-10  mx-auto py-5  wow animated fadeIn" id="contacto2"  data-wow-duration="2s">
+          <div class="col-md-10  mx-auto py-5  wow animated fadeIn" id="contacto2" data-wow-duration="2s">
             <form class="form-bg" action="" method="post">
               <p class="form-title">CONTÁCTANOS</p>
               <p class="form-titles">NOMBRE</p class="form-titles">
@@ -155,7 +158,7 @@ if (isset($_POST['submit'])) {
   </div>
   <div class="container-fluid" style="background-color: dimgray;">
     <div class="row">
-      <div class="col-md-4"  style="padding-top: 20px;">
+      <div class="col-md-4" style="padding-top: 20px;">
         <p class="areas-text">NUESTRAS</p>
         <p class="areas-text">ÁREAS</p>
       </div>
@@ -205,7 +208,7 @@ if (isset($_POST['submit'])) {
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <div class="col-bg-servicios shadow wow animated fadeInLeft"  data-wow-duration="2s">
+        <div class="col-bg-servicios shadow wow animated fadeInLeft" data-wow-duration="2s">
           <div class="text-center">
             <i class="fas fa-globe-americas icon-width"></i>
           </div>
@@ -214,7 +217,7 @@ if (isset($_POST['submit'])) {
         </div>
       </div>
       <div class="col-md-4">
-        <div class="col-bg-servicios shadow wow animated fadeInUp"  data-wow-duration="2s">
+        <div class="col-bg-servicios shadow wow animated fadeInUp" data-wow-duration="2s">
           <div class="text-center">
             <i class="fas fa-award  icon-width"></i>
           </div>
@@ -223,7 +226,7 @@ if (isset($_POST['submit'])) {
         </div>
       </div>
       <div class="col-md-4 ">
-        <div class="col-bg-servicios shadow wow animated fadeInRight"  data-wow-duration="2s">
+        <div class="col-bg-servicios shadow wow animated fadeInRight" data-wow-duration="2s">
           <div class="text-center">
             <i class="fas fa-code-branch icon-width"></i>
           </div>
@@ -291,11 +294,16 @@ if (isset($_POST['submit'])) {
     </div>
 
     <div class="row justify-content-center">
-      <div class="col-md-9 ofrecemos wow animated fadeInLeft" data-wow-duration="2s"><span class="number">1</span> Productos ecológicos que se degradan rápidamente.</div>
-      <div class="col-md-9 ofrecemos-2 wow animated fadeInLeft" data-wow-duration="2.3s"><span class="number">2</span> Servicio profesional 100% garantizado.</div>
-      <div class="col-md-9 ofrecemos wow animated fadeInLeft" data-wow-duration="2.6s"><span class="number">3</span> Los mejores costos del mercado que se adaptan a tus necesidades.</div>
-      <div class="col-md-9 ofrecemos-2 wow animated fadeInLeft" data-wow-duration="2.9s"><span class="number">4</span> La mejor logística del mercado, la cual nos permite una solución inmediata.</div>
-      <div class="col-md-9 ofrecemos wow animated fadeInLeft" data-wow-duration="3.2s"><span class="number">5</span> Técnicos altamente capacitados y certificados ante el conocer.
+      <div class="col-md-9 ofrecemos wow animated fadeInLeft" data-wow-duration="2s"><span class="number">1</span>
+        Productos ecológicos que se degradan rápidamente.</div>
+      <div class="col-md-9 ofrecemos-2 wow animated fadeInLeft" data-wow-duration="2.3s"><span class="number">2</span>
+        Servicio profesional 100% garantizado.</div>
+      <div class="col-md-9 ofrecemos wow animated fadeInLeft" data-wow-duration="2.6s"><span class="number">3</span> Los
+        mejores costos del mercado que se adaptan a tus necesidades.</div>
+      <div class="col-md-9 ofrecemos-2 wow animated fadeInLeft" data-wow-duration="2.9s"><span class="number">4</span>
+        La mejor logística del mercado, la cual nos permite una solución inmediata.</div>
+      <div class="col-md-9 ofrecemos wow animated fadeInLeft" data-wow-duration="3.2s"><span class="number">5</span>
+        Técnicos altamente capacitados y certificados ante el conocer.
       </div>
     </div>
 
@@ -304,8 +312,8 @@ if (isset($_POST['submit'])) {
         EMPRESA CON LAS QUE TRABAJAMOS
       </p>
     </div>
-    <div class="container" >
-      <img class="wow animated fadeIn"  data-wow-duration="3s" src="./css/empresas-desk.png" style="width: 100%;">
+    <div class="container">
+      <img class="wow animated fadeIn" data-wow-duration="3s" src="./css/empresas-desk.png" style="width: 100%;">
     </div>
     <!-- fin empresas-->
     <div class="row py-4 padding-ubic justify-content-center bg-contacto">
@@ -377,16 +385,15 @@ if (isset($_POST['submit'])) {
     speed: 500,
     speedAsDuration: true,
     header: '[data-scroll-header]'
-   
+
   });
-  var scroll = new SmoothScroll('nav',{
-		header: '[data-scroll-header]'
-	});
+  var scroll = new SmoothScroll('nav', {
+    header: '[data-scroll-header]'
+  });
 </script>
 <script src="./js/wow.min.js"></script>
 <script>
-    new WOW().init();
+  new WOW().init();
 </script>
 
 </html>
-

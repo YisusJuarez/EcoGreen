@@ -34,7 +34,7 @@
     <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item ">
-          <a class="nav-link" href="./index.html">Inicio </a>
+          <a class="nav-link" href="#inicio">Inicio </a>
         </li>
         <li class="nav-item d-md-block d-none">
           <a class="nav-link" data-scroll href="#contacto">Contacto</a>
@@ -114,7 +114,7 @@ if(isset($_POST['submit'])){
           </div>
         </div>
       </div>
-      <div class="col-md-8 col-lg-6 bg-image-2">
+      <div class="col-md-8 col-lg-6 bg-image-2" id="inicio">
         <div class="login d-flex align-items-center py-5">
           <div class="container">
             <div class="row">

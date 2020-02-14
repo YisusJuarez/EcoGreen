@@ -379,7 +379,7 @@ text-decoration: none;
     padding-right: 10px;
     border: 1px solid #25d366;
     background-color: #25d366;
-    color: #CCD1D1;
+    color: white;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 18px;
@@ -502,7 +502,20 @@ text-decoration: none;
 
 }
 .logo{
-    width: 40px;
+    width: 55px;
+}
+.tarjeta-text{
+    font-weight: lighter;
+    font-size: 20px;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 60px;
+}
+.color-tarjetas{
+    font-weight: bold;
+}
+.eco-color{
+    color: #25d366;
 }
 @media(max-width:1000px){
     .form-title-2 {

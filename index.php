@@ -16,7 +16,7 @@
 
 <body>
   <div class="boton-flotante d-lg-none shadow">
-    <a href="https://wa.me/+5215610065892"><i class="fab fa-whatsapp-square icon-whats"></i></a>
+    <a href="https://api.whatsapp.com/send?phone=5215610065892&text=&source=&data="><i class="fab fa-whatsapp-square icon-whats"></i></a>
     <a href="tel:5562377643"><i class="fas fa-phone-square-alt icon-llamada"></i></a>
   </div>
   <nav data-scroll-header class="navbar navbar-expand-lg navbar-light fixed-top bg-color">
@@ -53,7 +53,7 @@
         </li>
       </ul>
       <div class=" my-2 my-lg-0 d-lg-block d-none">
-        <a href="https://wa.me/+5215610065892" class="btn-eco"> <i style="font-size: 20px;" class="fab fa-whatsapp"></i>
+        <a href="https://api.whatsapp.com/send?phone=5215610065892&text=&source=&data=" class="btn-eco"> <i style="font-size: 20px;" class="fab fa-whatsapp"></i>
           WhatsApp</a>
       </div>
       <div class=" my-2 my-lg-0 d-lg-block d-none">
@@ -65,17 +65,15 @@
   <div class="container-fluid">
     <div class="row no-gutter">
       <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-block d-none ">
-        <div class="row" id="contacto ">
+        <div class="row" id="contacto">
           <div class="col-md-10 mx-auto py-5 wow animated fadeIn " style="margin-top: 20%;">
           <?php
-if (isset($_POST['submit'])) {
-    $to = "ventas@ecogreenmip.com.mx"; // correo propio
-    $from = $_POST['email']; // correo del usuario
+if(isset($_POST['submit'])){
+    $to = "ventas@ecogreenmip.com.mx"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
     $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
+    $last_name = $_POST['second_name'];
     $subject = "Solicitud de Información - EcoGreen";
-    //$subject2 = "Copy of your form submission";
-    //$message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
     $message = '<html>' .
         '<head><title>EcoGreen</title></head>' .
         '<body><h1>Solicitud de Información</h1>' .
@@ -85,22 +83,23 @@ if (isset($_POST['submit'])) {
         '<p>Teléfono:' . $_POST['message'] . "</p>" .
         '</body>' .
         '</html>';
-    //$message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-    $headers = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-   
-    $headers .= 'From: ' . $from . "\r\n";
-    //$headers2 = "From:" . $to;
-    $enviado = mail($to, $subject, $message, $headers);
-    //mail($from, $subject2, $message2, $headers2);
+        $headers = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+    $headers .= "From:" . $from;
+    $enviado = mail($to,$subject,$message,$headers);
+    
     if ($enviado) {
-        echo '<div class="alert alert-success alert-correo" role="alert">¡Correo enviado! Nos pondremos en contacto contigo lo mas pronto posible.</div>';
-    } else {
-        echo '<div class="alert alert-danger alert-correo" role="alert">¡Error! Hubo un error al intentar enviar el correo.</div>';
+      echo '<div class="alert alert-success alert-correo" role="alert">¡Correo enviado! Nos pondremos en contacto contigo lo mas pronto posible.</div>';
+  } else {
+      echo '<div class="alert alert-danger alert-correo" role="alert">¡Error! Hubo un error al intentar enviar el correo.</div>';
+  }
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
     }
-}
+
+
 ?>
-            <form action="" method="post" class="form-bg shadow-lg">
+
+            <form name="contacto2" action="" method="post" class="form-bg shadow-lg">
               <p class="form-title-2">CONTÁCTANOS</p>
               <p class="form-titles">NOMBRE</p class="form-titles">
               <input class="form-input" type="text" name="first_name">
@@ -110,7 +109,7 @@ if (isset($_POST['submit'])) {
               <input class="form-input" type="text" name="message">
               <p class="form-titles">CORREO</p>
               <input class="form-input" type="text" name="email">
-              <input type="submit" class="btn-form" value="ENVIAR">
+              <input type="submit" class="btn-form" value="ENVIAR" name="submit">
             </form>
           </div>
         </div>
@@ -141,15 +140,49 @@ if (isset($_POST['submit'])) {
       <div class=" col-md-4 col-lg-6 bg-image py-5 d-md-none">
         <div class="row">
           <div class="col-md-10  mx-auto py-5  wow animated fadeIn" id="contacto2" data-wow-duration="2s">
-            <form class="form-bg" action="" method="post">
+          <?php
+if(isset($_POST['submit2'])){
+    $to = "ventas@ecogreenmip.com.mx"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['second_name'];
+    $subject = "Solicitud de Información - EcoGreen";
+    $message = '<html>' .
+        '<head><title>EcoGreen</title></head>' .
+        '<body><h1>Solicitud de Información</h1>' .
+        '<hr>' .
+        '<p>Nombre:' . $first_name . $last_name . "</p>" .
+        '<p>Correo:' . $from . "</p>" .
+        '<p>Teléfono:' . $_POST['message'] . "</p>" .
+        '</body>' .
+        '</html>';
+        $headers = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+    $headers .= "From:" . $from;
+    $enviado = mail($to,$subject,$message,$headers);
+    
+    if ($enviado) {
+      echo '<div class="alert alert-success alert-correo" role="alert">¡Correo enviado! Nos pondremos en contacto contigo lo mas pronto posible.</div>';
+  } else {
+      echo '<div class="alert alert-danger alert-correo" role="alert">¡Error! Hubo un error al intentar enviar el correo.</div>';
+  }
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+
+
+?>
+
+            <form class="form-bg" action="" method="post" name="contacto3">
               <p class="form-title">CONTÁCTANOS</p>
               <p class="form-titles">NOMBRE</p class="form-titles">
-              <input class="form-input" type="text">
+              <input class="form-input" type="text" name="first_name">
+              <p class="form-titles">APELLIDO</p class="form-titles">
+              <input class="form-input" type="text" name="second_name">
               <p class="form-titles">TELÉFONO</p>
-              <input class="form-input" type="text">
+              <input class="form-input" type="text" name="message">
               <p class="form-titles">CORREO</p>
-              <input class="form-input" type="text">
-              <input type="submit" class="btn-form" value="ENVIAR">
+              <input class="form-input" type="text" name="email">
+              <input type="submit" class="btn-form" value="ENVIAR" name="submit2">
             </form>
           </div>
         </div>
@@ -266,9 +299,10 @@ if (isset($_POST['submit'])) {
           </div>-->
 
 
-          <p class="ofrecemos-text">Control de ratones | Control de hormigas | Control de alacranes | Control de pulgas
-            | Control de mosquitos
-            | Control de moscas | Control de chinches | Control de cucarachas | Control de arañas</p>
+          
+            <p class="ofrecemos-text">Control de chinches | Control de cucarachas | Control de alacranes | Control de roedores
+            | Control de arañas
+            | Control de moscas | Control de hormigas | Control de pulgas | Control de mosquitos</p>
         </div>
 
         <!-- <div class="col-md-2 ofrecemos">CONTROL DE RATONES</div>
@@ -281,11 +315,26 @@ if (isset($_POST['submit'])) {
         <div class="col-md-4 ofrecemos-2">CONTROL DE CUCARACHAS</div>
         <div class="col-md-4 ofrecemos">CONTROL DE ARAÑAS</div>-->
       </div>
+     
       <div class="text-center">
         <a data-scroll href="#contacto2" class="btn-oikos">CONTÁCTANOS</a>
       </div>
 
     </div>
+    <div class="container">
+      <div class="card shadow" style="margin-top: 30px; padding: 15px;">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="tarjeta-text"> EN <span class="eco-color">ECOGREEN</span>  ACEPTAMOS TODAS LAS TARJETAS DE <span class="color-tarjetas">CRÉDITO</SPAN> y <span class="color-tarjetas">DÉBITO</span></p>
+          </div>
+          <div class="col-md-6">
+            <img src="./css/tarjetas.png" style="width: 100%; padding: 10px;">
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    
     <div class="text-center">
       <p class="title-ofrecemos">
         ¿POR QUÉ CONTRATARNOS?
@@ -306,7 +355,6 @@ if (isset($_POST['submit'])) {
         Técnicos altamente capacitados y certificados ante el conocer.
       </div>
     </div>
-
     <div class="text-center">
       <p class="title-ofrecemos">
         EMPRESA CON LAS QUE TRABAJAMOS
